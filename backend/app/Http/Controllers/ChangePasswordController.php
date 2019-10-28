@@ -23,7 +23,7 @@ class ChangePasswordController extends Controller
 
    private function tokenNotFoundResponse()
    {
-      return response()->json(['error'=>'Token or Email is incorrect'],Response::HTTP_ONPROCESSABLE_ENTITY);
+      return response()->json(['error'=>'Token or Email is incorrect'],Response::HTTP_UNPROCESSABLE_ENTITY);
    }
 
    private function changePassword($request)
